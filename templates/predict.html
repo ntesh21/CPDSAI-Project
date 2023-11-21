@@ -163,9 +163,9 @@
             <form method="post">
                <div class="form-row">
                   <div class="input-data">
-                     <input type="text"  name="numSub" value="{{ request.form['numSub'] }}" required>
+                     <input type="text"  name="numView" value="{{ request.form['numView'] }}" required>
                      <div class="underline"></div>
-                     <label for="">Total Number of Subscribers</label>
+                     <label for="">Total Number of Viwers</label>
                   </div>
                   <div class="input-data">
                      <input type="text"  name="numUpload"  value="{{ request.form['numUpload'] }}" required>
@@ -175,29 +175,21 @@
                </div>
                <div class="form-row">
                     <div class="input-data">
-                        <select name="channelType" id="channelType"  value="{{ request.form['channelType'] }}">
-                            {% for ch in channel_type %}
-                                <option value="{{ch}}">{{ch}}</option>
-                            {% endfor %}
-                        </select>
+                        <input type="text"  name="monInc"  value="{{ request.form['monInc'] }}" required>
                         <div class="underline"></div>
-                        <label for="">Channel Type</label>
+                        <label for="">Average Monthly Earning</label>
                     </div>
                     <div class="input-data">
-                        <select name="country" id="country"  value="{{ request.form['country'] }}">
-                            {% for ct in countries %}
-                                <option value="{{ct}}">{{ct}}</option>
-                            {% endfor %}
-                        </select>
+                        <input type="text"  name="yearInc"  value="{{ request.form['yearInc'] }}" required>
                         <div class="underline"></div>
-                        <label for="">Country</label>
+                        <label for="">Average Yearly Earning</label>
                     </div>
                 </div>
                <button type="submit">Submit</button>
             </form>
             <ul>
-                <li><p>{{viewers_result}}</p></li>
-                <li><p>{{income_result}}</p></li>
+                <li><p>{{subscribers_result}}</p></li>
+                <!-- <li><p>{{income_result}}</p></li> -->
             </ul>
         </div>
                <!-- <div class="form-row"> -->
